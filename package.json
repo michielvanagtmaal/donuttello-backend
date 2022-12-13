@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/michielvanagtmaal/donuttello-backend/issues"
   },
-  "homepage": "https://github.com/michielvanagtmaal/donuttello-backend#readme"
+  "homepage": "https://github.com/michielvanagtmaal/donuttello-backend#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
