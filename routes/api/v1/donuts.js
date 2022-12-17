@@ -1,24 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const donutsController = require('../../../controllers/api/v1/donuts');
 
-router.get("/", (req, res) => {
-    res.json({
-        "status": "success",
-        "data": {
-            "donuts": []
-        }
-    });
-});
-
-router.post("/", (req, res) => {
-    res.json({
-        "status": "success",
-        "data": {
-            "donut": {
-                "text": "Learn node.js"
-            }
-        }
-    });
-});
+router.get("/", donutsController.getAll);
+router.post("/", donutsController.create);
 
 module.exports = router;
