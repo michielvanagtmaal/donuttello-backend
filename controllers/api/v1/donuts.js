@@ -1,14 +1,4 @@
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const donutSchema = new Schema({
-    text: {
-        type: String,
-        required: true
-    },
-    user: String,
-    completed: Boolean
-});
-const Donut = mongoose.model('Donut', donutSchema);
+const Donut = require('../../../models/Donut');
 
 const getAll = (req, res) => {
 
@@ -28,10 +18,12 @@ const getAll = (req, res) => {
 
 const create = (req, res, next) => {
 
+    
+
     let donut = new Donut();
-   // donut.text = "My first donut";
-    donut.user = "Michiel";
-    donut.completed = false;
+    donut.text = req.body.text;
+    donut.user = req.body.user;
+    donut.completed = req.body.completed;
     donut.save( (err, doc) => {
         if(err) {
             res.json({
