@@ -7,7 +7,8 @@ const donutSchema = new Schema({
     },
     user: String,
     completed: Boolean
-});
+})
 const Donut = mongoose.model('Donut', donutSchema);
 
 module.exports = Donut;
+
