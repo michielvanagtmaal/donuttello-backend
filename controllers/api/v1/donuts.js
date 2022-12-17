@@ -48,5 +48,30 @@ const create = (req, res, next) => {
     
 }
 
+const update = (req, res) => {
+    let user = req.user._id;
+    let donutId = req.params.id;
+    Donut.findOneAndUpdate({
+        user: user,
+        _id: donutId
+    }, {
+        completed: true
+    }, {
+        new: true
+    }).then(doc => {
+
+        res.json({
+            "status": "success",
+            "data": {
+                "donut": doc
+            }
+        })
+    }).catch(err => {
+        res.json(err);
+})
+}
+
+
 module.exports.getAll = getAll;
 module.exports.create = create;
+module.exports.update = update;
