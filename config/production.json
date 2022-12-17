@@ -1,0 +1,8 @@
+{
+    "Database": {
+        "conn": "mongodb+srv://donutnodejs:7bPQoYuzRSGEBqpS@cluster0.xpionku.mongodb.net/?retryWrites=true&w=majority"
+    },
+    "jwt": {
+        "secret": "MyVerySecretPassword"
+    }
+}

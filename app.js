@@ -8,9 +8,10 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const apiDonutsRouter = require('./routes/api/v1/donuts');
 const passport = require('./passport/passport');
+const config = require('config');
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/donutsapp');
+mongoose.connect(config.get('Database.conn'));
 
 
 const app = express();
