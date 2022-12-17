@@ -8,7 +8,6 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const apiDonutsRouter = require('./routes/api/v1/donuts');
 
-
 const app = express();
 
 // view engine setup
